@@ -70,7 +70,7 @@
 	</mvc:interceptors>
 
 	<!-- spring messageconveter 使用了iso8859-1编码 导致ajax会乱码 -->
-	<!-- <bean
+	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		<property name="messageConverters">
 			<list>
@@ -87,5 +87,5 @@
 				</bean>
 			</list>
 		</property>
-	</bean> -->
+	</bean>
 </beans>  
