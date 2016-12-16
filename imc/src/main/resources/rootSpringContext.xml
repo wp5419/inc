@@ -25,7 +25,7 @@
 	<task:annotation-driven/>
 	
 	<!-- 组件扫描  需要改动-->
-	<context:component-scan base-package="com.inc.*" /> 
+	<context:component-scan base-package="com.inc.*.*" /> 
 
 	
 	<!-- 定义国际化消息 -->
@@ -98,9 +98,9 @@
 		<!-- 检测含有hibernate标注的class -->
 		<property name="packagesToScan">
 			<list>
-				<value>com.wafer.cloud.task.model</value>
+				<value>com.inc.model</value>
 			</list>
-		</property>
+		</property> 
 		<property name="hibernateProperties">
 			<props>
 				<prop key="connection.useUnicode">true</prop>
@@ -114,6 +114,7 @@
 				<prop key="hibernate.use_outer_join">true</prop>
 				<prop key="cache.use_sencod_level_cache">true</prop>
 				<prop key="hibernate.cache.use_query_cache">true</prop> 
+			<!-- 	<prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop> -->
 				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
 			</props>
 		</property>
